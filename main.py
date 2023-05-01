@@ -1,7 +1,7 @@
 from tkinter import *
 import math
 import winsound
-# ---------------------------- CONSTANTS ------------------------------- #
+
 PINK = "#e2979c"
 RED = "#e7305b"
 GREEN = "#9bdeac"
@@ -33,11 +33,11 @@ def start_timer():
     if reps % 8 == 0:
         logo.config(text="Break", fg=RED)
         count_down(long_break_sec)
-        winsound.Beep(1500, 2000)
+        winsound.PlaySound("mixkit-alarm-tone-996.wav", winsound.SND_ALIAS)
     elif reps % 2 == 0:
         logo.config(text="Break", fg=PINK)
         count_down(short_break_sec)
-        winsound.Beep(1500, 2000)
+        winsound.PlaySound("mixkit-alarm-tone-996.wav", winsound.SND_ALIAS)
     else:
         logo.config(text="Work", fg=GREEN)
         count_down(work_sec)
